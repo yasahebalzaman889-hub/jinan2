@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل المؤسسات الشريكة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2e7d32;  
+            --primary-light: #81c784; 
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            direction: rtl;
+            background: var(--bg-gradient);
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            width: 100%;
+            max-width: 600px;
+            padding: 40px 20px 10px 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            height: 100px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+            margin-bottom: 15px;
+        }
+
+        .title-container {
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+        }
+
+        .subtitle {
+            font-size: 19px;
+            font-weight: 600;
+            color: #2e7d32;
+            margin-top: 5px;
+            display: block;
+            opacity: 0.9;
+        }
+
+        .menu-container {
+            width: 100%;
+            max-width: 480px;
+            padding: 20px;
+            box-sizing: border-box;
+            flex: 1;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .menu a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 20px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-color);
+            border: 2px solid var(--primary-light); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease-out backwards;
+            cursor: pointer;
+        }
+
+        .menu a:hover {
+            background: white;
+            transform: translateY(-3px);
+            border-color: var(--primary-dark);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .contact-section {
+            width: 100%;
+            max-width: 600px;
+            padding: 30px 20px;
+            text-align: center;
+            color: var(--text-color);
+            margin-top: auto;
+        }
+
+        .contact-text {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-weight: 600;
+        }
+
+        .phone-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: white;
+            color: var(--primary-dark);
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            direction: ltr;
+        }
+
+        .phone-circle:hover {
+            transform: scale(1.05);
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .menu-container { max-width: 90%; }
+            .logo { height: 85px; }
+            .phone-circle { font-size: 18px; padding: 10px 20px; }
+            .title { font-size: 24px; }
+            .subtitle { font-size: 17px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="logo.png" class="logo" alt="Logo">
+    <div class="title-container">
+        <div class="title">جمعية قاضي الحوائج</div>
+        <span class="subtitle">دليل المؤسسات المتعاقدة</span>
+    </div>
+</div>
+
+<div class="menu-container">
+    <div class="menu">
+        <a onclick="location.replace('labs.html')" style="animation-delay: 0.05s;">
+            <span>🧪 مختبرات وصيدليات</span><span>←</span>
+        </a>
+        <a onclick="location.replace('doctors.html')" style="animation-delay: 0.1s;">
+            <span>🩺 أطباء</span><span>←</span>
+        </a>
+        <a onclick="location.replace('restaurants.html')" style="animation-delay: 0.15s;">
+            <span>🍽️ مطاعم ومنتزهات</span><span>←</span>
+        </a>
+        <a onclick="location.replace('clothes.html')" style="animation-delay: 0.2s;">
+            <span>👕 محلات ألبسة</span><span>←</span>
+        </a>
+        <a onclick="location.replace('grocery.html')" style="animation-delay: 0.25s;">
+            <span>🛒 محلات سمانة</span><span>←</span>
+        </a>
+        <a onclick="location.replace('stores.html')" style="animation-delay: 0.3s;">
+            <span>🏢 محلات تجارية</span><span>←</span>
+        </a>
+        <a onclick="location.replace('construction.html')" style="animation-delay: 0.35s;">
+            <span>🏗️ مؤسسات بناء وتعهدات</span><span>←</span>
+        </a>
+        <a onclick="location.replace('offices.html')" style="animation-delay: 0.4s;">
+            <span>📄 مكاتب إدارية ومعاملات</span><span>←</span>
+        </a>
+        <a onclick="location.replace('services.html')" style="animation-delay: 0.45s;">
+            <span>🛠️ خدمات عامة</span><span>←</span>
+        </a>
+        <a onclick="location.replace('furniture.html')" style="animation-delay: 0.5s;">
+            <span>🛋️ مفروشات</span><span>←</span>
+        </a>
+        <a onclick="location.replace('produce.html')" style="animation-delay: 0.55s;">
+            <span>🍎 فواكه وخضار</span><span>←</span>
+        </a>
+        <a onclick="location.replace('fuel.html')" style="animation-delay: 0.6s;">
+            <span>⛽ محطات وقود</span><span>←</span>
+        </a>
+        <a onclick="location.replace('design.html')" style="animation-delay: 0.65s;">
+            <span>💻 تصميم غرافيك وبرامج</span><span>←</span>
+        </a>
+        <a onclick="location.replace('education.html')" style="animation-delay: 0.7s;">
+            <span>🎓 مدارس وجامعات</span><span>←</span>
+        </a>
+        <a onclick="location.replace('maintenance.html')" style="animation-delay: 0.75s;">
+            <span>⚙️ مؤسسات صيانة ومراكب وآليات</span><span>←</span>
+        </a>
+        <a onclick="location.replace('farming.html')" style="animation-delay: 0.8s;">
+            <span>🐄 زراعة ومواشي</span><span>←</span>
+        </a>
+    </div>
+</div>
+
+<div class="contact-section">
+    <div class="contact-text">
+        من يرغب بالانضمام إلى <strong>جمعية قاضي الحوائج</strong> أو المساهمة في أعمالها، الاتصال على الرقم:
+    </div>
+    <a href="tel:0096171325197" class="phone-circle">
+        <span>📞</span>
+        <span>+961 71 32 51 97</span>
+    </a>
+</div>
+
+</body>
+</html>

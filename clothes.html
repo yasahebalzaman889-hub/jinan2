@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محلات ألبسة - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2e7d32;  
+            --primary-light: #81c784; 
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            direction: rtl;
+            background: var(--bg-gradient);
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-color);
+            background: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .alert-box {
+            background: #fff3e0;
+            color: #e65100;
+            border-right: 5px solid #ff9800;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            max-width: 600px;
+            width: 100%;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .table-container {
+            width: 100%;
+            max-width: 900px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        thead {
+            background-color: var(--primary-dark);
+            color: white;
+        }
+
+        th, td {
+            padding: 15px 10px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+
+        th { font-weight: 700; }
+
+        tr:hover { background-color: #f1f8e9; }
+
+        .discount {
+            color: #d32f2f;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary-dark);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-top: auto;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.05);
+            background: #1b5e20;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        @media (max-width: 600px) {
+            th, td { padding: 10px 5px; font-size: 13px; }
+            .table-container { border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="title">👕 محلات ألبسة وعطورات</div>
+</div>
+
+<div class="alert-box">
+    ⚠️ ملاحظة: للتقسيط عبر الجمعية يجب تحصيل الموافقة المسبقة من الجمعية.
+</div>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>المؤسسة</th>
+                <th>نوع المؤسسة</th>
+                <th>مكان المؤسسة</th>
+                <th>رقم الهاتف</th>
+                <th>قيمة الحسم</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>عطورات بنت السلطان</strong></td>
+                <td>عطورات</td>
+                <td>حارة الفيكاني - مقابل محطة دلول مصلبية ماسا</td>
+                <td><a href="tel:70720773" style="text-decoration:none; color:inherit;">70720773</a></td>
+                <td class="discount">10%</td>
+            </tr>
+            <tr>
+                <td><strong>محلات مانيسا</strong></td>
+                <td>ألبسة وعطورات</td>
+                <td>تمنين التحتا - الساحة العامة - مقابل 1$</td>
+                <td><a href="tel:70286919" style="text-decoration:none; color:inherit;">70286919</a></td>
+                <td class="discount">10%</td>
+            </tr>
+            <tr>
+                <td><strong>مؤسسة Chicc Chouse 88</strong></td>
+                <td>ألبسة وأحذية</td>
+                <td>تمنين التحتا - الساحة العامة - مقابل حلويات مرتضى</td>
+                <td><a href="tel:70780854" style="text-decoration:none; color:inherit;">70780854</a></td>
+                <td class="discount">10%</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a href="javascript:void(0)" onclick="location.replace('index.html')" class="back-btn">
+    <span>→</span> العودة للرئيسية
+</a>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مختبرات وصيدليات - جمعية قاضي الحوائج</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2e7d32;  
+            --primary-light: #81c784; 
+            --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #c8e6c9 100%);
+            --text-color: #1b5e20;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            direction: rtl;
+            background: var(--bg-gradient);
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-color);
+            background: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .alert-box {
+            background: #fff3e0;
+            color: #e65100;
+            border-right: 5px solid #ff9800;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            max-width: 600px;
+            width: 100%;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* تنسيق الجدول */
+        .table-container {
+            width: 100%;
+            max-width: 900px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        thead {
+            background-color: var(--primary-dark);
+            color: white;
+        }
+
+        th, td {
+            padding: 15px 10px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+
+        th { font-weight: 700; }
+
+        tr:hover { background-color: #f1f8e9; }
+
+        .tag {
+            background: var(--primary-light);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: inline-block;
+            margin: 2px;
+        }
+
+        .discount {
+            color: #d32f2f;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary-dark);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-top: auto;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.05);
+            background: #1b5e20;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* تعديلات للموبايل */
+        @media (max-width: 600px) {
+            th, td { padding: 10px 5px; font-size: 13px; }
+            .discount { font-size: 15px; }
+            .table-container { border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="title">🧪 مختبرات وصيدليات</div>
+</div>
+
+<div class="alert-box">
+    ⚠️ ملاحظة: للتقسيط عبر الجمعية يجب تحصيل الموافقة المسبقة من الجمعية.
+</div>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>المؤسسة</th>
+                <th>النوع / الاختصاص</th>
+                <th>المكان</th>
+                <th>الهاتف</th>
+                <th>قيمة الحسم</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>مركز المحبة</strong></td>
+                <td>طب أسنان</td>
+                <td>تعلبايا - الطريق العام - بناية رمضان</td>
+                <td><a href="tel:03848477" style="text-decoration:none; color:inherit;">03848477</a></td>
+                <td class="discount">30%</td>
+            </tr>
+            <tr>
+                <td><strong>شركة MDC</strong></td>
+                <td>
+                    <span class="tag">مختبر</span> <span class="tag">أشعة</span> <span class="tag">أسنان</span><br>
+                    <span class="tag">علاج فيزيائي</span> <span class="tag">قلب</span> <span class="tag">أطفال</span>
+                </td>
+                <td>مفرق تمنين الشرقي - بجانب حمام الملوك</td>
+                <td><a href="tel:76485281" style="text-decoration:none; color:inherit;">76485281</a></td>
+                <td class="discount">25%</td>
+            </tr>
+            <tr>
+                <td><strong>اوبتيك منال</strong></td>
+                <td>فحص نظر مجاني - عوينات - عدسات - زجاج</td>
+                <td>قصرنبا - الطريق العام - مقابل محطة ضامن</td>
+                <td><a href="tel:71686759" style="text-decoration:none; color:inherit;">71686759</a></td>
+                <td class="discount">20%</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<a href="javascript:void(0)" onclick="location.replace('index.html')" class="back-btn">
+    <span>→</span> العودة للرئيسية
+</a>
+
+</body>
+</html>

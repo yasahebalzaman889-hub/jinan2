@@ -45,7 +45,7 @@
         }
 
         .title-container {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .title {
@@ -58,11 +58,27 @@
 
         .subtitle {
             font-size: 19px;
-            font-weight: 600;
+            font-weight: 700;
             color: #2e7d32;
             margin-top: 5px;
             display: block;
-            opacity: 0.9;
+        }
+
+        /* تنسيق الملاحظة الهامة الجديدة */
+        .important-note {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 15px;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #c62828; /* لون أحمر هادئ للملاحظة */
+            line-height: 1.5;
+            font-weight: 600;
+            border-right: 4px solid #c62828;
+            text-align: right;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .menu-container {
@@ -149,6 +165,7 @@
             .phone-circle { font-size: 18px; padding: 10px 20px; }
             .title { font-size: 24px; }
             .subtitle { font-size: 17px; }
+            .important-note { font-size: 13px; margin: 10px 15px; }
         }
     </style>
 </head>
@@ -159,6 +176,12 @@
     <div class="title-container">
         <div class="title">جمعية قاضي الحوائج</div>
         <span class="subtitle">دليل المؤسسات المتعاقدة</span>
+        
+        <div class="important-note">
+            👈 خاص مشتركي الجمعية<br>
+            يجب ابراز بطاقة الجمعية عند الاستفادة<br>
+            يمكن التقسيط عبر الجمعية بعد احضار فاتورة من المؤسسة وتحصيل موافقة خطية من الجمعية.
+        </div>
     </div>
 </div>
 
@@ -217,7 +240,7 @@
 
 <div class="contact-section">
     <div class="contact-text">
-        من يرغب بالانضمام إلى <strong>جمعية قاضي الحوائج</strong> أو المساهمة في أعمالها، الاتصال على الرقم:
+        المؤسسة التي ترغب بإجراء اتفاق مع <strong>جمعية قاضي الحوائج</strong>، الاتصال على الرقم:
     </div>
     <a href="tel:0096171325197" class="phone-circle">
         <span>📞</span>

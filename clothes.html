@@ -24,6 +24,7 @@
             flex-direction: column;
             align-items: center;
             padding: 20px;
+            box-sizing: border-box;
         }
 
         .header {
@@ -54,6 +55,7 @@
             font-weight: 600;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-sizing: border-box;
         }
 
         .table-container {
@@ -61,15 +63,17 @@
             max-width: 900px;
             background: white;
             border-radius: 15px;
-            overflow: hidden;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             margin-bottom: 30px;
+            overflow-x: auto; /* يسمح بالسحب الأفقي المريح على الموبايل */
+            -webkit-overflow-scrolling: touch;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             text-align: center;
+            min-width: 600px;
         }
 
         thead {
@@ -78,11 +82,18 @@
         }
 
         th, td {
-            padding: 15px 10px;
+            padding: 15px 12px;
             border-bottom: 1px solid #eee;
             font-size: 14px;
+            white-space: nowrap;
         }
 
+        /* السماح للنصوص الطويلة مثل العنوان بالالتفاف بشكل منسق */
+        td.address-cell {
+            white-space: normal;
+            min-width: 180px;
+            line-height: 1.4;
+        }
         th { font-weight: 700; }
 
         tr:hover { background-color: #f1f8e9; }
@@ -91,6 +102,11 @@
             color: #d32f2f;
             font-weight: 700;
             font-size: 18px;
+        }
+        .phone-link {
+            text-decoration: none;
+            color: #0d47a1;
+            font-weight: 600;
         }
 
         .back-btn {
@@ -116,8 +132,9 @@
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         @media (max-width: 600px) {
-            th, td { padding: 10px 5px; font-size: 13px; }
-            .table-container { border-radius: 0; }
+            th, td { padding: 12px 8px; font-size: 13px; }
+            .discount { font-size: 16px; }
+            .table-container { border-radius: 10px; width: 100%; }
         }
     </style>
 </head>
@@ -146,32 +163,38 @@
             <tr>
                 <td><strong>عطورات بنت السلطان</strong></td>
                 <td>عطورات</td>
-                <td>حارة الفيكاني - مقابل محطة دلول مصلبية ماسا</td>
-                <td><a href="tel:70720773" style="text-decoration:none; color:inherit;">70720773</a></td>
+                <td class="address-cell">حارة الفيكاني - مقابل محطة دلول مصلبية ماسا</td>
+                <td><a href="tel:70720773" class="phone-link" style="text-decoration:none; color:inherit;">70720773</a></td>
                 <td class="discount">10%</td>
             </tr>
             <tr>
                 <td><strong>محلات مانيسا</strong></td>
                 <td>ألبسة وعطورات</td>
-                <td>تمنين التحتا - الساحة العامة - مقابل 1$</td>
-                <td><a href="tel:70286919" style="text-decoration:none; color:inherit;">70286919</a></td>
+                <td class="address-cell">تمنين التحتا - الساحة العامة - مقابل 1$</td>
+                <td><a href="tel:70286919" class="phone-link" style="text-decoration:none; color:inherit;">70286919</a></td>
                 <td class="discount">10%</td>
             </tr>
             <tr>
                 <td><strong>مؤسسة Chicc Chouse 88</strong></td>
                 <td>ألبسة وأحذية</td>
-                <td>تمنين التحتا - الساحة العامة - مقابل حلويات مرتضى</td>
-                <td><a href="tel:70780854" style="text-decoration:none; color:inherit;">70780854</a></td>
+                <td class="address-cell">تمنين التحتا - الساحة العامة - مقابل حلويات مرتضى</td>
+                <td><a href="tel:70780854" class="phone-link" style="text-decoration:none; color:inherit;">70780854</a></td>
                 <td class="discount">10%</td>
             </tr>
              <tr>
                 <td><strong>سندس </strong></td>
                 <td>ألبسة </td>
-                <td>حزرتا المفرق  - حي الجامع </td>
-                <td><a href="tel:70722842" style="text-decoration:none; color:inherit;">70722842</a></td>
+                <td class="address-cell">حزرتا المفرق  - حي الجامع </td>
+                <td><a href="tel:70722842"  class="phone-link" style="text-decoration:none; color:inherit;">70722842</a></td>
                 <td class="discount">10%</td>
             </tr>
-            
+             <tr>
+                <td><strong>Technosolution company ClC bags </strong></td>
+                <td>مبيع شنط </td>
+                <td class="address-cell"> اوتوستراد زحلة- بعلبك مقابل stop and shop  </td>
+                <td><a href="tel:71002567" class="phone-link" style="text-decoration:none; color:inherit;">71002567</a></td>
+                <td class="discount">30%</td>
+            </tr>
         </tbody>
     </table>
 </div>

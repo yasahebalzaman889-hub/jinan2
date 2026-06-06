@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مختبرات وصيدليات - جمعية قاضي الحوائج</title>
+    <title>مختبرات وصيدليات واطباء  - جمعية قاضي الحوائج</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -24,6 +24,7 @@
             flex-direction: column;
             align-items: center;
             padding: 20px;
+            box-sizing: border-box;
         }
 
         .header {
@@ -54,23 +55,26 @@
             font-weight: 600;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-sizing: border-box;
         }
 
-        /* تنسيق الجدول */
+       /* حاوية الجدول لحل مشكلة الاختفاء على الموبايل */
         .table-container {
             width: 100%;
             max-width: 900px;
             background: white;
             border-radius: 15px;
-            overflow: hidden;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             margin-bottom: 30px;
+            overflow-x: auto; /* يسمح بالسحب الأفقي المريح على الموبايل */
+            -webkit-overflow-scrolling: touch;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             text-align: center;
+            min-width: 600px; /* يضمن أن الجدول لن ينضغط أقل من هذا الحجم لتبقى البيانات واضحة */
         }
 
         thead {
@@ -78,10 +82,18 @@
             color: white;
         }
 
-        th, td {
-            padding: 15px 10px;
+       th, td {
+            padding: 15px 12px;
             border-bottom: 1px solid #eee;
             font-size: 14px;
+            white-space: nowrap; /* يمنع انقسام السطر الواحد بشكل مشوه */
+        }
+
+        /* السماح للنصوص الطويلة مثل العنوان بالالتفاف بشكل منسق */
+        td.address-cell {
+            white-space: normal;
+            min-width: 180px;
+            line-height: 1.4;
         }
 
         th { font-weight: 700; }
@@ -102,6 +114,11 @@
             color: #d32f2f;
             font-weight: 700;
             font-size: 18px;
+        }
+        .phone-link {
+            text-decoration: none;
+            color: #0d47a1;
+            font-weight: 600;
         }
 
         .back-btn {
@@ -128,16 +145,16 @@
 
         /* تعديلات للموبايل */
         @media (max-width: 600px) {
-            th, td { padding: 10px 5px; font-size: 13px; }
-            .discount { font-size: 15px; }
-            .table-container { border-radius: 0; }
+            th, td { padding: 12px 8px; font-size: 13px; }
+            .discount { font-size: 16px; }
+            .table-container { border-radius: 10px; width: 100%; }
         }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <div class="title">🧪 مختبرات وصيدليات</div>
+    <div class="title">🧪 مختبرات وصيدليات واطباء </div>
 </div>
 
 <div class="alert-box">
@@ -159,8 +176,8 @@
             <tr>
                 <td><strong>مركز المحبة</strong></td>
                 <td>طب أسنان</td>
-                <td>تعلبايا - الطريق العام - بناية رمضان</td>
-                <td><a href="tel:03848477" style="text-decoration:none; color:inherit;">03848477</a></td>
+                <td class="address-cell">تعلبايا - الطريق العام - بناية رمضان</td>
+                <td><a href="tel:03848477"  class="phone-link" style="text-decoration:none; color:inherit;">03848477</a></td>
                 <td class="discount">30%</td>
             </tr>
             <tr>
@@ -169,23 +186,30 @@
                     <span class="tag">مختبر</span> <span class="tag">أشعة</span> <span class="tag">أسنان</span><br>
                     <span class="tag">علاج فيزيائي</span> <span class="tag">قلب</span> <span class="tag">أطفال</span>
                 </td>
-                <td>مفرق تمنين الشرقي - بجانب حمام الملوك</td>
-                <td><a href="tel:76485281" style="text-decoration:none; color:inherit;">76485281</a></td>
+                <td class="address-cell">مفرق تمنين الشرقي - بجانب حمام الملوك</td>
+                <td><a href="tel:76485281" class="phone-link" style="text-decoration:none; color:inherit;">76485281</a></td>
                 <td class="discount">25%</td>
             </tr>
             <tr>
                 <td><strong>اوبتيك منال</strong></td>
                 <td>فحص نظر مجاني - عوينات - عدسات - زجاج</td>
-                <td>قصرنبا - الطريق العام - مقابل محطة ضامن</td>
-                <td><a href="tel:71686759" style="text-decoration:none; color:inherit;">71686759</a></td>
+                <td class="address-cell">قصرنبا - الطريق العام - مقابل محطة ضامن</td>
+                <td><a href="tel:71686759" class="phone-link" style="text-decoration:none; color:inherit;">71686759</a></td>
                 <td class="discount">20%</td>
             </tr>
              <tr>
                 <td><strong>صيدلية الخطيب</strong></td>
                 <td>صيدلية</td>
-                <td>تمنين التحتا - الطريق العام - مفرق مستشفى رياق </td>
-                <td><a href="tel:03085693" style="text-decoration:none; color:inherit;">03085693</a></td>
+                <td class="address-cell">تمنين التحتا - الطريق العام - مفرق مستشفى رياق </td>
+                <td><a href="tel:03085693" class="phone-link" style="text-decoration:none; color:inherit;">03085693</a></td>
                 <td class="discount">15%</td>
+            </tr>
+             <tr>
+                <td><strong> الدكتور حيدر علي المصري </strong></td>
+                <td>جراحة الانف والاذن والحنجرة-جراحة تجميلية- تخطيط سمع </td>
+                <td class="address-cell">رياق سنتر المطار - قرب مستشفى رياق  </td>
+                <td><a href="tel:71913918" class="phone-link" style="text-decoration:none; color:inherit;">71913918</a></td>
+                <td class="discount">50%</td>
             </tr>
         </tbody>
     </table>
